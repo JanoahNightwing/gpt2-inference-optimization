@@ -2,8 +2,8 @@
 Benchmarking and optimizing GPT-2 inference on a T4 GPU: fp16, KV cache, and torch.compile, with throughput, memory, and perplexity results.
 ## Overview
 
-I measured how fast GPT-2 small (124M parameters) generates text on a Colab T4 GPU,
-then tested optimizations one at a time. So far: half precision (fp16) and the KV cache.
+I measured how fast GPT-2 small (124M parameters) generates text on a Colab T4 GPU
+and then tested optimizations one at a time. So far: half precision (fp16) and the KV cache.
 
 ## Setup
 
@@ -42,8 +42,8 @@ then tested optimizations one at a time. So far: half precision (fp16) and the K
 
 ## Mistakes I fixed along the way
 
-- My first run had a warm-up outlier, so I increased warm-up from 3 to 10 runs.
-- I originally didn't reset the peak memory counter, which made fp16 memory look identical to fp32.
+- My first run had a warm-up outlier so I increased warm-up from 3 to 10 runs.
+- I originally didn't reset the peak memory counter which made fp16 memory look identical to fp32.
 
 ## Next steps
 
