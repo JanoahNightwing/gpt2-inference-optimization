@@ -1,6 +1,6 @@
 # gpt2-inference-optimization
 Benchmarking and optimizing GPT-2 inference on a T4 GPU: fp16, KV cache, and torch.compile, with throughput, memory, and perplexity results.
-# GPT-2 Inference Optimization
+## Overview
 
 I measured how fast GPT-2 small (124M parameters) generates text on a Colab T4 GPU,
 then tested optimizations one at a time. So far: half precision (fp16) and the KV cache.
