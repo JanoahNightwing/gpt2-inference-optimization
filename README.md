@@ -51,3 +51,15 @@ and then tested optimizations one at a time. So far: half precision (fp16) and t
 - `torch.compile`
 - INT8 quantization
 - Longer prompts to measure prefill cost
+
+## Quality check (perplexity)
+
+WikiText-2 test set non-overlapping 1024-token chunks (lower is better):
+
+| precision | perplexity |
+|---|---|
+| fp32 | 29.95 |
+| fp16 | 29.96 |
+
+fp16 gives the same quality as fp32 (difference of 0.01) at half the memory.
+Values are a bit higher than sliding-window numbers reported elsewhere (probably because of the chunking.)
